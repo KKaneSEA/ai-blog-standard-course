@@ -8,7 +8,7 @@ import { Logo } from "../Logo";
 
 export const AppLayout = ({ children }) => {
   const { user } = useUser();
-  console.log("User: ", user);
+
   return (
     <div className="grid grid-cols-[300px_1fr] h-screen max-h-screen">
       <div className="flex flex-col text-white overflow-hidden ">
@@ -43,7 +43,7 @@ export const AppLayout = ({ children }) => {
                 />
               </div>
               <div className="flex-1">
-                <div classNmae="font-bold">{user.email}</div>
+                <div className="font-bold">{user.email}</div>
                 <Link className="text-sm" href="/api/auth/logout">
                   Logout
                 </Link>
