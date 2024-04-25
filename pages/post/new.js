@@ -12,12 +12,15 @@ export default function NewPost(props) {
     e.preventDefault();
     const response = await fetch(`/api/generatePost`, {
       method: "POST",
-      headers: { "content-type": "application/json" },
+      headers: {
+        "content-type": "application/json",
+      },
       body: JSON.stringify({ topic, keywords }),
     });
 
     const json = await response.json();
     console.log(json.post.postContent);
+
     setPostContent(json.post.postContent);
   };
   return (

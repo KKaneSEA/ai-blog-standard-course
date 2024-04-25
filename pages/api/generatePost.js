@@ -1,4 +1,4 @@
-import { Configuration, OpenAIApi } from "openai";
+import { OpenAIApi, Configuration } from "openai";
 
 export default async function handler(req, res) {
   const config = new Configuration({
